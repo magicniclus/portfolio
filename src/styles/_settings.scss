@@ -1,0 +1,54 @@
+//******** Color ********//
+$clearPrimary: #EDEAE6;
+$darkPrimary: #373634;
+$darkTransparancy: rgba(55, 54, 52, 0.08);;
+
+$secondaryYellow: #898A52;
+$secondaryYellowSecondary: #68693f;
+
+$primaryTeraBois: #4194A3;
+$backgroundTeraBois: #C8C1BD;
+
+$primaryKosiKaza: #b48484;
+
+$primaryJustMining: #48221b;
+
+$primaryReve: #48221b;
+
+
+//******** Variables ********//
+
+//******** Font-Size ********//
+$h1: 64px;
+$h2: 32px;
+$h3: 36px;
+$p: 24px; 
+$pSecondary: 12px;
+$btn: 24px;
+
+
+//******** Font-Weight ********//
+$fWH1: 300;
+$fWH2: 100;
+$fWP: 300;
+
+
+//******** Media-Query ********//
+
+
+//******** Animation ********//
+@mixin colorAnimation{
+    @keyframes colorChange {
+        0%{
+            color: $darkPrimary;
+        }
+    
+        50%{
+            color: red;
+        }
+    
+        100%{
+            color: $darkPrimary;  
+        }
+    }
+}

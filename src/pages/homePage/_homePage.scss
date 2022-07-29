@@ -1,0 +1,179 @@
+@import "../../styles/settings.scss";
+
+:root {
+    --headerSize: 15rem;
+}
+
+.homePageHeader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 0;
+    .topContainer {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .titleContainer {
+            h1 {
+                font-size: $h1;
+                font-weight: $fWH1;
+            }
+            h2 {
+                font-size: $h2;
+                font-weight: $fWH2;
+            }
+        }
+        .scrollContainer {
+            h4 {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+            h4:before {
+                content: "";
+                height: 90%;
+                width: 2px;
+                background-color: $darkPrimary;
+                position: absolute;
+                left: -20px;
+            }
+            h4:after {
+                content: "";
+                display: inline-block;
+                height: 0;
+                width: 0;
+                border-top: 15px solid $darkPrimary;
+                border-right: 9px solid transparent;
+                border-left: 9px solid transparent;
+                position: absolute;
+                left: -27px;
+                bottom: 0;
+                // margin-bottom: 1rem;
+            }
+        }
+    }
+    .bottomContainer {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        z-index: 15;
+        .reseauxContainer {
+            display: flex;
+            flex-direction: column;
+            height: 70%;
+            justify-content: space-between;
+            button {
+                font-weight: 100;
+                cursor: pointer;
+                height: 38px;
+                font-size: $h2;
+                font-weight: 100;
+                border: none;
+                background-color: transparent;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                transition: color;
+                transition-duration: 0.5s;
+                transition-timing-function: ease-out;
+            }
+            button:hover {
+                color: $secondaryYellow;
+            }
+        }
+        .contactContainer {
+            display: flex;
+            flex-direction: column;
+            height: 95%;
+            justify-content: end;
+            z-index: 17;
+            button {
+                cursor: pointer;
+                height: 38px;
+                font-size: calc($btn + 50%);
+                border: none;
+                font-weight: 100;
+                background-color: $clearPrimary;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                transition-duration: 0.2s;
+                color: $secondaryYellow;
+            }
+            button:hover {
+                color: $secondaryYellow;
+            }
+        }
+    }
+}
+.homePageMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    .hiYou {
+        position: fixed;
+        width: 90vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50vh;
+        transform: translate(6%, -50%);
+        .hiYouContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 250px;
+            cursor: pointer;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            perspective: 1200;
+            overflow: hidden;
+            .cards {
+                width: 200px;
+                height: 100%;
+                transition: all 0.5s;
+                transform-style: preserve-3d;
+                transform: translatey(300px);
+                opacity: 0;
+                .front, .back{
+                    color: $darkTransparancy;
+                    font-size: 200px;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    backface-visibility: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center
+                  };
+                  
+                  .back{
+                    transform: rotateY(180deg);
+                  }
+                  
+            }
+        }
+    }
+    .sectionOne,
+    .sectionTwo {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

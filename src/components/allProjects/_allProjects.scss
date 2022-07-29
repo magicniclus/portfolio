@@ -1,0 +1,310 @@
+@import "../../styles/settings.scss";
+
+.allProjectsContainer{
+    width: 95%;
+    max-width: 1450px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .projects{
+        min-height: 75%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // .projectContainer{
+        //     cursor: pointer;
+        //     width: 100%;
+        //     height: 15%;
+        //     z-index: 30;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     transition: height;
+        //     transition-timing-function: ease-out;
+        //     transition-duration: 0.8s;
+        //     .imgContainer{
+        //         width: 80%;
+        //         height: 100%;
+        //         background-position: 25% 40%;
+        //         background-size: cover;
+        //         filter: grayscale(100%);
+        //         transition: filter;
+        //         transition-timing-function: ease-out;
+        //         transition-duration: 0.8s;
+        //     }
+        //     .descriptionContainer{
+        //         z-index: 100;
+        //         width: 20%;
+        //         display: flex;
+        //         .description{
+        //             height: 100%;
+        //             max-height: 5rem;
+        //             display: flex;
+        //             flex-direction: column;
+        //             justify-content: center;
+        //             margin-left: 30%;
+        //             .bottomContainer{
+        //                 position: relative;
+        //                 display: flex;
+        //                 justify-content: space-between;
+        //                 align-items: center;
+        //                 width: 5rem;
+        //                 z-index: 78;
+        //                 p{
+        //                     font-size: $pSecondary;
+        //                     font-weight: $fWP;
+        //                     color: $darkPrimary;
+        //                 }
+        //                 .date{
+        //                     .one, .two, .three, .four{
+        //                         opacity: 0;
+        //                     }
+        //                 }
+        //             }
+        //             .bottomContainer::before{
+        //                 content: "";
+        //                 position: absolute;
+        //                 top: 46%;
+        //                 left: 0.9rem;
+        //                 height: 1px;
+        //                 background-color: $darkPrimary;
+        //             }
+        //             .topContainer{
+        //                 height: 0;
+        //                 overflow: hidden;
+        //                 h3{
+        //                     margin: 0;
+        //                     font-size: $h3;
+        //                     font-weight: $fWH2;
+        //                     opacity: 0;
+        //                     animation-name: titleApparition;
+        //                     animation-duration: 0.8s;
+        //                     animation-timing-function: ease-out;
+        //                     animation-fill-mode: forwards;
+        //                     animation-delay: 1s;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // .one{
+        //     .imgContainer{
+        //         background-image: url("../../assets/terabois/AdobeStock_191224000_Preview.jpeg");
+        //     }
+        // }
+        // .two{
+        //     .imgContainer{
+        //         background-image: url("../../assets/terabois/pexels-magda-ehlers-2114014.jpg");
+        //     }
+        // }
+        // .terabois{
+        //     .imgContainer{
+        //         background-image: url("../../assets/terabois/AdobeStock_242300689_Preview.jpeg");
+        //     }
+        // }
+        // .four{
+        //     .imgContainer{
+        //         background-image: url("../../assets/terabois/pexels-philippe-donn-1242764.jpg");
+        //     }
+        // }
+        .projectContainer:hover{
+            height: 30%;
+            .imgContainer{
+                filter: none;
+            }
+            .descriptionContainer{
+                .description{
+                    .topContainer{
+                        animation-name: containerApparition;
+                        animation-duration: 1s;
+                        animation-timing-function: ease-out;
+                        animation-fill-mode: forwards;
+                        animation-delay: 0.8s;
+                        h3{
+                            margin: 0;
+                            font-size: $h3;
+                            font-weight: $fWH2;
+                        }
+                    }
+                    .bottomContainer{
+                        .date{
+                            .one{
+                                animation-name: dateApparition;
+                                animation-duration: 0.3s;
+                                animation-timing-function: ease-out;
+                                animation-fill-mode: forwards;
+                                animation-delay: 0.5s;
+                            }
+                            .two{
+                                animation-name: dateApparition;
+                                animation-duration: 0.3s;
+                                animation-timing-function: ease-out;
+                                animation-fill-mode: forwards;
+                                animation-delay: 0.6s;
+                            }
+                            .three{
+                                animation-name: dateApparition;
+                                animation-duration: 0.3s;
+                                animation-timing-function: ease-out;
+                                animation-fill-mode: forwards;
+                                animation-delay: 0.7s;
+                            }
+                            .four{
+                                animation-name: dateApparition;
+                                animation-duration: 0.3s;
+                                animation-timing-function: ease-out;
+                                animation-fill-mode: forwards;
+                                animation-delay: 0.8s;
+                            }
+                        }
+                    }
+                    .bottomContainer::before{
+                        animation-name: lignApparition;
+                        animation-duration: 0.5s;
+                        animation-timing-function: ease-out;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+        }
+        .one:hover{
+            .descriptionContainer{
+                .description{
+                    .topContainer{
+                        h3{
+                            color: $primaryReve;
+                        }
+                    }
+                }
+            }
+        }
+        .two:hover{
+            .descriptionContainer{
+                .description{
+                    .topContainer{
+                        h3{
+                            color: $primaryKosiKaza;
+                        }
+                    }
+                }
+            }
+        }
+        .terabois:hover{
+            .descriptionContainer{
+                .description{
+                    .topContainer{
+                        h3{
+                            color: $primaryTeraBois;
+                        }
+                    }
+                }
+            }
+        }
+        .four:hover{
+            .descriptionContainer{
+                .description{
+                    .topContainer{
+                        h3{
+                            color: $primaryJustMining;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .title{
+    //     width: 100%;
+    //     position: relative;
+    //     display: flex;
+    //     h2{
+    //         font-size: calc($h1 - 20%);
+    //         font-weight: $fWH2;
+    //         display: flex;
+    //         background-color: $clearPrimary;
+    //         z-index: 3;
+    //         font-weight: 300;
+    //         display: flex;
+    //         align-items: flex-end;
+    //         span{    
+    //             font-weight: 200;
+    //             font-size: 40px;
+    //             margin-left: 0.7rem;
+    //         }
+    //     }
+    // }
+    // .title:before{
+    //     content: "";
+    //     position: absolute;
+    //     transform: translate(0%, 50%);
+    //     top: 50%;
+    //     width: 100%;
+    //     height: 1px;
+    //     background-color: $darkPrimary;
+    //     z-index: 1;
+    // }
+    // .title:after{
+    //     content: "";
+    //     position: absolute;
+    //     transform: translate(0%, -50%);
+    //     top: 50%;
+    //     width: 20%;
+    //     height: 3.5rem;
+    //     background-color: $clearPrimary;
+    //     z-index: 1;
+    // }
+}
+
+@keyframes titleApparition {
+    0%{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes containerApparition {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes dateApparition {
+    0%{
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+    50%{
+        // opacity: 0.7;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes lignApparition {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 2rem;
+    }
+}
+
+// Lundi bac a douche posé ferme le troue || parquet 
+// mardi carrelage posé le matin très tot 
+// mercredi finition de la douche 
